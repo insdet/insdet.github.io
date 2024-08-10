@@ -6,7 +6,7 @@ layout: default
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 75%;
 } </style>
 
 # Overview
@@ -29,9 +29,11 @@ layout: default
     <div style="width:22.5%">
     <a href="https://aimerykong.github.io/">
     <img alt="Shu Kong" src="pics/people/shu.jpg" height="200"  width ="200" style =  "border-radius: 50%; object-fit: cover; ">
-    </a><br>
+    </a>
+    <div class = "center"><br>
     <a href="https://aimerykong.github.io/">Shu Kong</a><br>
     UMacau, Texas A&M
+    </div>
   </div>
   <div style="width:7.5%">
   </div>
@@ -39,9 +41,11 @@ layout: default
   <div style="width:22.5%">
     <a href="https://yananlix1.github.io/">
     <img alt="TBD" src="pics/people/yanan-li.jpg"  height="200"   width ="200" style =  "border-radius: 50%; object-fit: cover; ">
-    </a><br>
-  <a href="https://yananlix1.github.io/">Yanan Li</a><br>
+    </a>
+    <div class = "center"><br>
+    <a href="https://yananlix1.github.io/">Yanan Li</a><br>
     Zhejiang Lab
+    </div>
   </div>
   <div style="width:7.5%">
   </div>
@@ -49,9 +53,11 @@ layout: default
   <div style="width:22.5%">
     <a href="https://insdet.github.io/">
     <img alt="TBD" src="pics/people/profile-dummy.jpg"  height="200"   width ="200" style =  "border-radius: 50%; object-fit: cover; ">
-    </a><br>
-  <a href="https://insdet.github.io/">TBD</a><br>
+    </a>
+    <div class = "center"><br>
+    <a href="https://insdet.github.io/">TBD</a><br>
     TBD
+    </div>
   </div>
   <div style="width:7.5%">
   </div>

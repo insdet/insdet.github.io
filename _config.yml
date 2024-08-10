@@ -1,0 +1,16 @@
+theme: jekyll-theme-cayman
+title: 'Object Instance Detection'
+description:
+- ACCV 2024 Workshop
+- December 8th, 2024
+- Room ： TBD
+- Hanoi, Vietnam
+buttons:
+  Overview: './index.html'
+  Invited Speakers: './index.html#invited-speakers'
+  Schedule: './index.html#schedule'
+  Organizers: './index.html#organizers'
+  Challenge: './index.html#challenge'
+  Important Dates: './index.html#important-dates'
+github:
+  is_project_page: false

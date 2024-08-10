@@ -6,14 +6,14 @@ layout: default
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 25%;
 } </style>
 
 # Overview
 <div style="text-align: justify">
   Instance Detection (InsDet) is an important but fundamental problem in robotics and AR/VR applications. Different from Object Detection (ObjDet) aiming to detect all objects belonging to some predefined classes, InsDet requires detecting specific object instances defined by some examples capturing the instance from multiple views. For example, in a daily scenario, when fetching a specific object instance (e.g., my-coffee-mug), a robot must detect it at a distance, distinguishing it from similar objects (e.g., other mugs or cups) in a cluttered scene for subsequent operations. We invite researchers to the Challenge Workshop on Object Instance Detection where we investigate multiple directions through a competition to address InsDet problem.
     <div class = "center">
-      <img alt="fig2" src="pics/object-insdet.png" >
+      <img alt="fig1" src="pics/object-insdet.png" >
       <p>An illustration of Object Detection vs. Instance Detection.</p>
     </div>
 <strong><li>A realistic unified InsDet protocol</li></strong>

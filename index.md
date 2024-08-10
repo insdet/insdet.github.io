@@ -1,13 +1,9 @@
 ---
 layout: default
+title: Object Instance Detection Workshop
+description: InsDet @ ACCV 2024
 ---
-<style> 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-} </style>
+
 
 # Overview
 <div style="text-align: justify">

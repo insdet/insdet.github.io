@@ -11,10 +11,13 @@ layout: default
 
 # Overview
 <div style="text-align: justify">
-Instance Detection (InsDet) is an important but fundamental problem in robotics and AR/VR applications. Different from Object Detection (ObjDet) aiming to detect all objects belonging to some predefined classes, InsDet requires detecting specific object instances defined by some examples capturing the instance from multiple views. For example, in a daily scenario, when fetching a specific object instance (e.g., my-coffee-mug), a robot must detect it at a distance, distinguishing it from similar objects (e.g., other mugs or cups) in a cluttered scene for subsequent operations. We invite researchers to the Challenge Workshop on Object Instance Detection where we investigate multiple directions through a competition to address InsDet problem.
-<li>A realistic unified InsDet protocol</li> In real-world indoor robotic applications, we consider the scenario that assistive robots must locate and recognize instances to fetch them in a cluttered indoor scene. For a given object instance, the robots should see it only from a few views at the training stage, and then accurately detect it at a distance in any scene at the testing stage. 
-<li>InsDet in the closed-world</li> InsDet has been explored in a closed-world setting, which allows access to profile images during model development. While one can exploit profile images to train models, it is still unknown how testing images look like when encountered in the open world. Prevalent methods adopt a cut-paste-learn strategy [10] that cuts and pastes profile images on random background photos (sampled in the open world) to generate synthetic training data and uses such synthetic data to train a detector.
-<li>InsDet in the open-world</li> The challenge of InsDet lies in its open-world nature that one has no knowledge of data distribution at test-time, which can be unknown testing scene imagery, unexpected scene clutter, and novel object instances specified only in testing. Prevalent methods exploit the open world by using foundation models [1] and by using diverse data to pretrain InsDet models [3].  
+  Instance Detection (InsDet) is an important but fundamental problem in robotics and AR/VR applications. Different from Object Detection (ObjDet) aiming to detect all objects belonging to some predefined classes, InsDet requires detecting specific object instances defined by some examples capturing the instance from multiple views. For example, in a daily scenario, when fetching a specific object instance (e.g., my-coffee-mug), a robot must detect it at a distance, distinguishing it from similar objects (e.g., other mugs or cups) in a cluttered scene for subsequent operations. We invite researchers to the Challenge Workshop on Object Instance Detection where we investigate multiple directions through a competition to address InsDet problem.
+<ol>A realistic unified InsDet protocol</ol> 
+  In real-world indoor robotic applications, we consider the scenario that assistive robots must locate and recognize instances to fetch them in a cluttered indoor scene. For a given object instance, the robots should see it only from a few views at the training stage, and then accurately detect it at a distance in any scene at the testing stage. 
+<ol>InsDet in the closed-world</ol>
+  InsDet has been explored in a closed-world setting, which allows access to profile images during model development. While one can exploit profile images to train models, it is still unknown how testing images look like when encountered in the open world. Prevalent methods adopt a cut-paste-learn strategy [10] that cuts and pastes profile images on random background photos (sampled in the open world) to generate synthetic training data and uses such synthetic data to train a detector.
+<ol>InsDet in the open-world</ol>
+  The challenge of InsDet lies in its open-world nature that one has no knowledge of data distribution at test-time, which can be unknown testing scene imagery, unexpected scene clutter, and novel object instances specified only in testing. Prevalent methods exploit the open world by using foundation models and by using diverse data to pretrain InsDet models.  
 </div>
 
 # Invited Speakers
@@ -25,6 +28,16 @@ Instance Detection (InsDet) is an important but fundamental problem in robotics 
     </a><br>
     <a href="https://aimerykong.github.io/">Shu Kong</a><br>
     UMacau, Texas A&M
+  </div>
+  <div style="width:7.5%">
+  </div>
+
+  <div style="width:22.5%">
+    <a href="https://yananlix1.github.io/">
+    <img alt="TBD" src="pics/people/yanan-li.jpg"  height="200"   width ="200" style =  "border-radius: 50%; object-fit: cover; ">
+    </a><br>
+  <a href="https://yananlix1.github.io/">Yanan Li</a><br>
+    Zhejiang Lab
   </div>
   <div style="width:7.5%">
   </div>

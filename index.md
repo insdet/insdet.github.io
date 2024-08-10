@@ -46,7 +46,7 @@ layout: default
     <a href="https://insdet.github.io/">
     <img alt="TBD" src="pics/people/profile-dummy.jpg"  height="200"   width ="200" style =  "border-radius: 50%; object-fit: cover; ">
     </a><br>
-  <a href="https://insdet.github.io/">Dan Parker</a><br>
+  <a href="https://insdet.github.io/">TBD</a><br>
     TBD
   </div>
   <div style="width:7.5%">
@@ -94,7 +94,7 @@ layout: default
        
   <div style="width:22.5%">
     <a href="https://ics.uci.edu/~yunhaz5/">
-    <img alt="Yunhan Zhao" src="pics/people/yunhan-zhao.jpg"   height="200"  width ="200" style =  "border-radius: 50%; object-fit: cover; ">
+    <img alt="Yunhan Zhao" src="pics/people/yunhan-zhao.png"   height="200"  width ="200" style =  "border-radius: 50%; object-fit: cover; ">
     </a><br>
   <a href="https://ics.uci.edu/~yunhaz5/">Yunhan Zhao</a><br>
     UC Irvine

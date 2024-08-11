@@ -26,6 +26,18 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+.instructorphoto img {
+  width: 135px;
+  height: 135px;
+  border-radius: 135px;
+  margin-bottom: 10px;
+}
+.instructor {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  margin-right: 10px;
+}
 
 .publication-title {
 }

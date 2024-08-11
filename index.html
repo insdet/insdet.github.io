@@ -70,10 +70,10 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">InsDet<br>
             </h1>
-            <p class="title is-4 publication-title">
+            <p class="title is-3 publication-title">
               The 1<sup>st</sup> workshop on Object <font color="blue">Ins</font>tance <font color="blue">Det</font>ection
             </p>
-            <h1 class="is-is-5"; style="color: #5c5c5c;">in conjunction with ACCV 2024, Hanoi, Vietnam.</h1>
+            <h1 class="is-is-4"; style="color: #5c5c5c;">in conjunction with ACCV 2024, Hanoi, Vietnam.</h1>
             <b>Location: TBD</b><br>
             <b>Time: TBD</b><br>
           </div>
@@ -85,14 +85,14 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <h2 class="subtitle has-text-centered">
+        <h1 class="subtitle has-text-centered">
           <a href="#overview" class="button"><b>Overview</b></a>
           <a href="#schedule" class="button"><b>Schedule</b></a>
           <a href="#speakers" class="button"><b>Invited Speakers</b></a>
           <a href="#challenge" class="button"><b>Challenge</b></a>
           <a href="#dates" class="button"><b>Important Dates</b></a>
           <a href="#organizers" class="button"><b>Organizers</b></a>
-        </h2>
+        </h1>
       </div>
     </div>
   </section>
@@ -195,7 +195,7 @@
                 <p class="subtitle is-6">UMacau, Texas A&M</p>
               </div>
             </div>
-            <div class="content">
+            <div class="content has-text-justified">
               Shu Kong is on the faculty of FST, University of Macau, and CSE, Texas A&M University. He leads the Computer Vision Lab. Before that he spent two years as a postdoctoral researcher at the Robotics Institute, CMU. He received his PhD from UC-Irvine. His research interests lie in computer vision, machine learning and robotics, with a particular interest in visual perception and learning in an open world. He has published a number of papers addressing open-world problems and applying their solutions to interdisciplinary research. His paper on open-set recognition received honorable mention for Best Paper / Marr Prize at ICCV2021. He was the lead organizer of the workshops on "open-world vision" at CVPR 2021-2024, and "Dealing with the Novelty in Open Worlds" at WACV 2022 and 2023. 
             </div>
           </div>
@@ -216,7 +216,7 @@
                 <p class="subtitle is-6">Zhejiang Lab</p>
               </div>
             </div>
-            <div class="content">
+            <div class="content has-text-justified">
               Yanan Li is an associate researcher at Zhejiang Lab, leading a fundamental computer vision/machine learning research group. Before that, she completed her PhD in the Department of Computer Science and Technology from Zhejiang University. Her research interests focus on zero/few-shot learning, open-world learning, long-tailed recognition, object/instance detection and segmentation. She has published a number of papers addressing zero/few-shot learning problems and applying their solutions to interdisciplinary research. She was one of the organizers of the workshops on "open-world vision" at CVPR 2023 and 2024.
             </div>
           </div>
@@ -237,7 +237,7 @@
                 <p class="subtitle is-6">TBD</p>
               </div>
             </div>
-            <div class="content"></div>
+            <div class="content has-text-justified"></div>
           </div>
         </div>
       </a>
@@ -250,31 +250,33 @@
       <section class="section" id="Challenge">
         <div class="container is-max-desktop content">
           <h2 class="title" id="challenge">Challenge</h2>
-            This year, we plan to run a competition on our InsDet dataset, which is the first instance detection benchmark dataset which is larger 
-            in scale and more challenging than existing InsDet datasets. The major strengths of our InsDet dataset over prior InsDet datasets include 
-            (1) both high-resolution profile images of object instances and high-resolution testing images from more realistic indoor scenes, 
-            simulating real-world indoor robots locating and recognizing object instances from a cluttered indoor scene in a distance 
-            (2) a realistic unified InsDet protocol to foster the InsDet research. 
-            <ul>
-              <b><li>A realistic unified InsDet protocol.</li></b>
-              In real-world indoor robotic applications, we consider the scenario that assistive robots must locate and recognize instances to fetch them 
-              in a cluttered indoor scene. For a given object instance, the robots should see it only from a few views at the training stage, 
-              and then accurately detect it at a distance in any scene at the testing stage.
+            <div class="content has-text-justified">
+              This year, we plan to run a competition on our InsDet dataset, which is the first instance detection benchmark dataset which is larger 
+              in scale and more challenging than existing InsDet datasets. The major strengths of our InsDet dataset over prior InsDet datasets include 
+              (1) both high-resolution profile images of object instances and high-resolution testing images from more realistic indoor scenes, 
+              simulating real-world indoor robots locating and recognizing object instances from a cluttered indoor scene in a distance 
+              (2) a realistic unified InsDet protocol to foster the InsDet research. 
+              <ul>
+                <b><li>A realistic unified InsDet protocol.</li></b>
+                In real-world indoor robotic applications, we consider the scenario that assistive robots must locate and recognize instances to fetch them 
+                in a cluttered indoor scene. For a given object instance, the robots should see it only from a few views at the training stage, 
+                and then accurately detect it at a distance in any scene at the testing stage.
             
-              <b><li>InsDet in the closed-world.</li></b>
-              InsDet has been explored in a closed-world setting, which allows access to profile images during model development. 
-              While one can exploit profile images to train models, it is still unknown how testing images look like when encountered in the open world. 
-              Prevalent methods adopt a cut-paste-learn strategy [10] that cuts and pastes profile images on random background photos 
-              (sampled in the open world) to generate synthetic training data and uses such synthetic data to train a detector.
+                <b><li>InsDet in the closed-world.</li></b>
+                InsDet has been explored in a closed-world setting, which allows access to profile images during model development. 
+                While one can exploit profile images to train models, it is still unknown how testing images look like when encountered in the open world. 
+                Prevalent methods adopt a cut-paste-learn strategy [10] that cuts and pastes profile images on random background photos 
+                (sampled in the open world) to generate synthetic training data and uses such synthetic data to train a detector.
 
-              <b><li>InsDet in the open-world.</li></b>
-              The challenge of InsDet lies in its open-world nature that one has no knowledge of data distribution at test-time, 
-              which can be unknown testing scene imagery, unexpected scene clutter, and novel object instances specified only in testing. 
-              Prevalent methods exploit the open world by using foundation models and by using diverse data to pretrain InsDet models.
-            </ul>
-            <br>
-            We use <a href="https://eval.ai/web/challenges/challenge-page/2358/overview"><b>EvalAI</b></a> as submission protal.
-            <b>The team with the top-performing submission will be invited to give short talks during the workshop.</b>  
+                <b><li>InsDet in the open-world.</li></b>
+                The challenge of InsDet lies in its open-world nature that one has no knowledge of data distribution at test-time, 
+                which can be unknown testing scene imagery, unexpected scene clutter, and novel object instances specified only in testing. 
+                Prevalent methods exploit the open world by using foundation models and by using diverse data to pretrain InsDet models.
+              </ul>
+              <br>
+              We use <a href="https://eval.ai/web/challenges/challenge-page/2358/overview"><b>EvalAI</b></a> as submission protal.
+              <b>The team with the top-performing submission will be invited to give short talks during the workshop.</b>
+            </div>
         </div>
       </section>
     </div>

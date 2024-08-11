@@ -2,30 +2,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-h1,h2,h3 {
-  color: #1a1a1a;
-  /*font-weight: 300;*/
-  font-weight: bold;
-}
-
-h1 {
-  margin: 0 0 10px;
-  font-size: 30px;
-  line-height: 35px;
-}
-
-h2 {
-  margin: 0 0 10px;
-  font-size: 25px;
-  line-height: 30px;
-}
-
-h3 {
-  margin: 0;
-  font-size: 20px;
-  line-height: 25px;
-}
-
 .footer .icon-link {
     font-size: 25px;
     color: #000;

@@ -31,7 +31,7 @@
     }
 
     .button {
-      border-radius: 10px;
+      border-radius: 15px;
       background: #ffffffd0;
       padding: 5px 15px 5px 15px;
     }
@@ -107,23 +107,6 @@
             a robot must detect it at a distance, distinguishing it from similar objects (e.g., other mugs or cups) 
             in a cluttered scene for subsequent operations. We invite researchers to the Challenge Workshop on Object Instance Detection 
             where we investigate multiple directions through a competition to address InsDet problem.
-            <ul>
-              <b><li>A realistic unified InsDet protocol.</li></b>
-              In real-world indoor robotic applications, we consider the scenario that assistive robots must locate and recognize instances to fetch them 
-              in a cluttered indoor scene. For a given object instance, the robots should see it only from a few views at the training stage, 
-              and then accurately detect it at a distance in any scene at the testing stage.
-            
-              <b><li>InsDet in the closed-world.</li></b>
-              InsDet has been explored in a closed-world setting, which allows access to profile images during model development. 
-              While one can exploit profile images to train models, it is still unknown how testing images look like when encountered in the open world. 
-              Prevalent methods adopt a cut-paste-learn strategy [10] that cuts and pastes profile images on random background photos 
-              (sampled in the open world) to generate synthetic training data and uses such synthetic data to train a detector.
-
-              <b><li>InsDet in the open-world.</li></b>
-              The challenge of InsDet lies in its open-world nature that one has no knowledge of data distribution at test-time, 
-              which can be unknown testing scene imagery, unexpected scene clutter, and novel object instances specified only in testing. 
-              Prevalent methods exploit the open world by using foundation models and by using diverse data to pretrain InsDet models.
-            </ul>
             <br>
             <div class = "center">
               <img alt="fig1" src="https://raw.githubusercontent.com/insdet/insdet.github.io/main/static/pics/site/objdet-insdet.png">
@@ -272,9 +255,26 @@
             (1) both high-resolution profile images of object instances and high-resolution testing images from more realistic indoor scenes, 
             simulating real-world indoor robots locating and recognizing object instances from a cluttered indoor scene in a distance 
             (2) a realistic unified InsDet protocol to foster the InsDet research. 
+            <ul>
+              <b><li>A realistic unified InsDet protocol.</li></b>
+              In real-world indoor robotic applications, we consider the scenario that assistive robots must locate and recognize instances to fetch them 
+              in a cluttered indoor scene. For a given object instance, the robots should see it only from a few views at the training stage, 
+              and then accurately detect it at a distance in any scene at the testing stage.
+            
+              <b><li>InsDet in the closed-world.</li></b>
+              InsDet has been explored in a closed-world setting, which allows access to profile images during model development. 
+              While one can exploit profile images to train models, it is still unknown how testing images look like when encountered in the open world. 
+              Prevalent methods adopt a cut-paste-learn strategy [10] that cuts and pastes profile images on random background photos 
+              (sampled in the open world) to generate synthetic training data and uses such synthetic data to train a detector.
+
+              <b><li>InsDet in the open-world.</li></b>
+              The challenge of InsDet lies in its open-world nature that one has no knowledge of data distribution at test-time, 
+              which can be unknown testing scene imagery, unexpected scene clutter, and novel object instances specified only in testing. 
+              Prevalent methods exploit the open world by using foundation models and by using diverse data to pretrain InsDet models.
+            </ul>
             <br>
-            <ul><b>Submission Portal</b>: <a href="https://eval.ai/web/challenges/challenge-page/2358/overview">EvalAI</a></ul>
-            <ul>The team with the top-performing submission will be invited to give short talks during the workshop.</ul>       
+            We use <a href="https://eval.ai/web/challenges/challenge-page/2358/overview"><b>EvalAI</b></a> as submission protal.
+            <b>The team with the top-performing submission will be invited to give short talks during the workshop.</b>  
         </div>
       </section>
     </div>

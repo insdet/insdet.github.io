@@ -95,7 +95,7 @@
             <h2 class="title is-3">Overview</h2>
             <img src="static/pics/site/objdet-insdet.png" alt="1" style="width: auto; height: auto; display: block; margin: 5px auto;"/> 
             <div class="content has-text-justified">
-              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #000;">
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 0px; color: #000;">
                 Instance Detection (InsDet) is a practically important task in robotics applications, e.g., elderly-assistant robots need to fetch specific items from a cluttered kitchen, micro-fulfillment robots for the retail need to pick items from mixed boxes or shelves. Different from Object Detection (ObjDet) detecting all objects belonging to some predefined classes, InsDet aims to detect specific object instances defined by some examples capturing the instance from multiple views.
               </p>  
               <p style="text-align: justify;">              
@@ -119,7 +119,7 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Important Dates</h2>
             <div class="content has-text-justified">
-              <p style="text-align: left; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #000;">
+              <p style="text-align: left; font-size: 16px; line-height: 1.5; margin-top: 0px; color: #000;">
                 <li><s>March 24, 2025, InsDet (6.60 GB) will be released.</s></li>
                 <li><s>March 24, 2025, EvalAI server will be open.</s></li>
                 <li><s>May 1, 2025, Scenes Test (2.43 GB) will be released.</s></li>
@@ -143,7 +143,7 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Dataset</h2>
             <div class="content has-text-justified">
-              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #000;">
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 0px; color: #000;">
                 The <b>InsDet</b> dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
               <ul>
                 <li><h4><b>Objects.</b></h4>
@@ -176,7 +176,7 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Benchmarking Protocol</h2>
             <div class="content has-text-justified">
-              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #000;">
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 0px; color: #000;">
                 <ul>
                 <li><h4><b>Goal.</b></h4>
                   Developing instance detectors using profile images (cf. visuals below) and optionally some random background images (e.g., to apply cut-paste-learn<sup>[1]</sup>). The detector should detect object instances of interest in real-world testing images.</li>
@@ -206,10 +206,10 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Evaluation & Submission</h2>
             <div class="content has-text-justified">
-              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #000;">
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 0px; color: #000;">
                 Following the COCO dataset<sup>[8]</sup>, we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on <b>InsDet</b> dataset. Additionally, we will also evaluate AP on <b>easy</b> and <b>hard</b> scenes separately. 
               </p>
-              <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: 60%; height: 60%; display: block; margin: 10px auto;"/>
+              <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: 75%; height: 75%; display: block; margin: 10px auto;"/>
               <h4><b>Official Baseline</b></h4>
               <ol>
                 <li><b>Faster RCNN<sup>[2]</sup> + Cut-Paste-Learn strategy<sup>[1]</sup>.</b>
@@ -242,7 +242,7 @@
   "image_name": "hard.pantry_room_001.rgb_019.jpg"}]</code></pre>
               </p>
               <h4><b>References</b></h4>
-              <p style="text-align: justify; font-size: 12px; line-height: 0.8; margin-top: 5px; color: #ccc;">
+              <p style="text-align: justify; font-size: 10px; line-height: 1.0; margin-top: 0px; color: #ccc;">
                 <ul>[1] Dwibedi, Debidatta, et al. "Cut, paste and learn: Surprisingly easy synthesis for instance detection." Proceedings of the IEEE international conference on computer vision. 2017.</ul>
                 <ul>[2] Girshick, Ross. "Fast r-cnn." Proceedings of the IEEE international conference on computer vision. 2015.</ul>
                 <ul>[3] Shen, Qianqian, et al. “A High-Resolution Dataset for Instance Detection with Multi-View Instance Capture.” Thirty-seventh conference on neural information processing systems datasets and benchmarks track. 2023.</ul>

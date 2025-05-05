@@ -41,14 +41,12 @@
         <h1 class="subtitle has-text-centered">
           <a href="#overview" class="button"><b>Overview</b></a>
           <a href="#dates" class="button"><b>Important Dates</b></a>
-          <a href="#datset" class="button"><b>Dataset</b></a>
-          <a href="#protocol" class="button"><b>Protocol</b></a>
-          <a href="#evaluation" class="button"><b>Evaluation</b></a>
+          <a href="#instruction" class="button"><b>Instruction</b></a>
           <a href="#organizers" class="button"><b>Organizers</b></a>
           <div class="dropdown">
             <span class="button"><b>Challenges</b>&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
             <div class="dropdown-content">
-              <a href="https://eval.ai/web/challenges/challenge-page/2478/overview">ACCV 2024</a><br />
+              <a href="https://eval.ai/web/challenges/challenge-page/2478/overview">CVPR 2025</a><br />
               <a href="https://eval.ai/web/challenges/challenge-page/2358/overview">ACCV 2024</a><br />
               <a href="https://eval.ai/web/challenges/challenge-page/2277/overview">CVPR 2023</a>
             </div>
@@ -105,7 +103,8 @@
     <div class="container is-max-desktop">
       <section class="section" id="dataset">
         <div class="container is-max-desktop content">
-          <h2 class="title" id="dataset">Dataset</h2>
+          <h2 class="title" id="instruction">Instruction</h2>
+          <h3>Dataset</h3>
           The dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images.
           <br>
           Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
@@ -113,18 +112,10 @@
             <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view.</li>
             <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
             <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels.</li>
-          </ol>         
-        </div>
-      </section>
-    </div>
-  </section>
-  
-
-    <section class="section" style="margin-top: -50px">
-    <div class="container is-max-desktop">
-      <section class="section" id="protocol">
-        <div class="container is-max-desktop content">
-          <h2 class="title" id="protocol">Benchmarking Protocol</h2>
+          </ol>
+          <br>
+          <br>
+          <h3>Benchmarking Protocol</h3>
           <ol>
             <li><b>Goal.</b> Developing instance detectors using profile images and optionally some random background images. The detector should detect object instances of interest in real-world testing images.</li>
             <li>
@@ -137,22 +128,15 @@
             <li><b>Environment for testing.</b> Real-world indoor scene images, in which participants' algorithms should detect object instances of interest.</li>
           </ol>
           <br>
-          <b>Importantly, participants are not allowed to develop any instance detectors on the Real-world indoor scene images we provided.</b> Furthermore, for participants who are invited for a presentation, we might ask for your code and models for verification.     
-        </div>
-      </section>
-    </div>
-  </section>
-
-
-    <section class="section" style="margin-top: -50px">
-    <div class="container is-max-desktop">
-      <section class="section" id="protocol">
-        <div class="container is-max-desktop content">
-          <h2 class="title" id="protocol">Evaluation</h2>
+          <b>Importantly, participants are not allowed to develop any instance detectors on the Real-world indoor scene images we provided.</b> Furthermore, for participants who are invited for a presentation, we might ask for your code and models for verification. 
+          <br>
+          <br>
+          <h3>Evaluation</h3>
           Following the COCO dataset [8], we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on InsDet dataset. Additionally, we will also evaluate AP on easy and hard scenes separately.
+          <br>
           <div class="center">
             <img alt="fig1" src="https://raw.githubusercontent.com/insdet/insdet.github.io/main/static/pics/site/evaluation_metrics.png">
-          </div>
+          </div>          
         </div>
       </section>
     </div>

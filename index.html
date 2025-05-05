@@ -117,6 +117,30 @@
 <!--               Participants in this challenge will be tasked with predicting the bounding boxes for each given instance from testing images. This exciting opportunity allows researchers, students, and data scientists to apply their expertise in computer vision and machine learning to address instance detection problem. We refer participants to the user guide for details. -->
 
 
+  <!-- Dates overview -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Important Dates</h2>
+            <div class="content has-text-justified">
+              <p style="text-align: justify;">
+                <li><s>March 24, 2025, InsDet (6.60 GB) will be released.</s></li>
+                <li><s>March 24, 2025, EvalAI server will be open.</s></li>
+                <li><s>May 1, 2025, Scenes Test (2.43 GB) will be released.</s></li>
+                <li>May 5, 2025, Evaluation scripts will be uploaded to github repo.</li>
+                <li>June 2, 2025, Challenge will be closed.</li>
+                <li>June 3, 2025, Invitation will be sent to some participants for presenting at the workshop.</li>
+                <li>June 11/12, 2025, Workshop day.</li>   
+              </p>      
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- End dates overview -->
+
+
   <!-- Dataset overview -->
     <section class="section hero is-light">
       <div class="container is-max-desktop">
@@ -145,64 +169,43 @@
   <!-- End dataset overview -->
 
 
-  <!-- Dates overview -->
+  <!-- Dataset overview -->
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Important Dates</h2>
+            <h2 class="title is-3">Benchmarking Protocol</h2>
             <div class="content has-text-justified">
-              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
-                <li><s>March 24, 2025, InsDet (6.60 GB) will be released.</s></li>
-                <li><s>March 24, 2025, EvalAI server will be open.</s></li>
-                <li><s>May 1, 2025, Scenes Test (2.43 GB) will be released.</s></li>
-                <li>May 5, 2025, Evaluation scripts will be uploaded to github repo.</li>
-                <li>June 2, 2025, Challenge will be closed.</li>
-                <li>June 3, 2025, Invitation will be sent to some participants for presenting at the workshop.</li>
-                <li>June 11/12, 2025, Workshop day.</li>   
-              </p>      
+              <h3>Dataset</h3>
+              <p style="text-align: justify;">
+                <ol>
+                  <li><b>Goal.</b> Developing instance detectors using profile images and optionally some random background images. 
+                    The detector should detect object instances of interest in real-world testing images.</li>
+                  <li><b>Environment for model development.</b>
+                    <ol type="a">
+                      <li>A set of object instances, each of which has some visual examples captured from multiple views. 
+                        Participants should develop a model to successfully detect these object instances.</li>
+                      <li>Some random background images (not used in testing). Participants might use them to synthesize images. 
+                        Participants can also download and use other external background images in training.</li>
+                    </ol>
+                  </li>
+                  <li><b>Environment for testing.</b> Real-world indoor scene images, in which participants' algorithms should 
+                    detect object instances of interest.</li>
+                </ol>
+                <b>Importantly, participants are not allowed to develop any instance detectors on the Real-world indoor scene images we provided.</b> 
+                Furthermore, for participants who are invited for a presentation, we might ask for your code and models for verification. 
+              </p>    
             </div>
           </div>
         </div>
       </div>
     </section>
-  <!-- End dates overview -->
+  <!-- End dataset overview -->
+  
 
 
+          <h3></h3>
 
-
-
-    <section class="section" style="margin-top: -50px">
-    <div class="container is-max-desktop">
-      <section class="section" id="dataset">
-        <div class="container is-max-desktop content">
-          <h2 class="title" id="instruction">Instruction</h2>
-          <h3>Dataset</h3>
-          The dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images.
-          <br>
-          Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
-          <ol>
-            <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view.</li>
-            <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
-            <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels.</li>
-          </ol>
-          <br>
-          <br>
-          <h3>Benchmarking Protocol</h3>
-          <ol>
-            <li><b>Goal.</b> Developing instance detectors using profile images and optionally some random background images. The detector should detect object instances of interest in real-world testing images.</li>
-            <li>
-              <b>Environment for model development.</b>
-              <ol type="a">
-                <li>A set of object instances, each of which has some visual examples captured from multiple views. Participants should develop a model to successfully detect these object instances.</li>
-                <li>Some random background images (not used in testing). Participants might use them to synthesize images. Participants can also download and use other external background images in training.</li>   
-              </ol>
-            </li>
-            <li><b>Environment for testing.</b> Real-world indoor scene images, in which participants' algorithms should detect object instances of interest.</li>
-          </ol>
-          <br>
-          <b>Importantly, participants are not allowed to develop any instance detectors on the Real-world indoor scene images we provided.</b> Furthermore, for participants who are invited for a presentation, we might ask for your code and models for verification. 
-          <br>
           <br>
           <h3>Evaluation</h3>
           Following the COCO dataset [8], we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on InsDet dataset. Additionally, we will also evaluate AP on easy and hard scenes separately.

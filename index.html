@@ -128,7 +128,7 @@
                 <li><s>May 1, 2025, Scenes Test (2.43 GB) will be released.</s></li>
                 <li>May 5, 2025, Evaluation scripts will be uploaded to github repo.</li>
                 <li>June 2, 2025, Challenge will be closed.</li>
-                <li>June 3, 2025, Invitation will be sent.</li>
+                <li>June 3, 2025, Invitation will be sent to winners.</li>
                 <li>June 11/12, 2025, Workshop day.</li>   
               </p>      
             </div>
@@ -149,8 +149,26 @@
               <p style="text-align: justify;">
                 The dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
               <ol>
-                <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). 
-                  Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view.</li>
+                
+                <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view. When capturing profile images for each instance, inspired by prior arts, we paste a QR code on the tabletop, which enables pose estimation, e.g., using COLMAP. We use the GrabCut toolbox to derive foreground masks of instances in profile images. This removes background pixels (such as QR code regions) in the profile images.
+                <code>
+                  Instance folder: raw_data
+                  |-- 000_aveda_shampoo
+                    |-- images
+                    |-- 001.jpg
+                    |-- 002.jpg
+                    ...
+                    |-- 024.jpg
+                  |-- masks
+                    |-- 001.jpg
+                    |-- 002.jpg
+                    ...
+                    |-- 024.jpg
+                  |-- 001_binder_clips_median
+                  ...
+                  |-- 099_mug_blue
+                </code>
+                </li>
                 <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
                 <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. 
                   We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels.</li>

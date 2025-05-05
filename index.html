@@ -94,27 +94,25 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Overview</h2>
             <img src="static/pics/site/objdet-insdet.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+            <br>
             <div class="content has-text-justified">
               <p style="text-align: justify;">
-                Instance Detection (InsDet) is a practically important task in robotics applications, e.g., elderly-assistant robots need to 
-                fetch specific items from a cluttered kitchen, micro-fulfillment robots for the retail need to pick items from mixed boxes or 
-                shelves. Different from Object Detection (ObjDet) detecting all objects belonging to some predefined classes, InsDet aims to 
-                detect specific object instances defined by some examples capturing the instance from multiple views.
-              </p>    
+                Instance Detection (InsDet) is a practically important task in robotics applications, e.g., elderly-assistant robots need to fetch specific items from a cluttered kitchen, micro-fulfillment robots for the retail need to pick items from mixed boxes or shelves. Different from Object Detection (ObjDet) detecting all objects belonging to some predefined classes, InsDet aims to detect specific object instances defined by some examples capturing the instance from multiple views.
+              </p>  
+              <br>
               <p style="text-align: justify;">              
-                This year, we plan to run a competition on our InsDet dataset, which is the instance detection benchmark dataset which is larger 
-                in scale and more challenging than existing InsDet datasets. The major strengths of our InsDet dataset over prior InsDet datasets 
-                include (1) both high-resolution profile images of object instances and high-resolution testing images from more realistic indoor 
-                scenes, simulating real-world indoor robots locating and recognizing object instances from a cluttered indoor scene in a distance 
-                (2) a realistic unified InsDet protocol to foster the InsDet research. 
-              </p>         
+                This year, we plan to run a competition on our InsDet dataset, which is the instance detection benchmark dataset which is larger in scale and more challenging than existing InsDet datasets. The major strengths of our InsDet dataset over prior InsDet datasets include (1) both high-resolution profile images of object instances and high-resolution testing images from more realistic indoor scenes, simulating real-world indoor robots locating and recognizing object instances from a cluttered indoor scene in a distance (2) a realistic unified InsDet protocol to foster the InsDet research. 
+              </p>  
+              <br>
+              <p style="text-align: justify;">              
+                Participants in this challenge will be tasked with predicting the bounding boxes for each given instance from testing images. This exciting opportunity allows researchers, students, and data scientists to apply their expertise in computer vision and machine learning to address instance detection problem. We refer participants to the <a href="https://docs.google.com/document/d/15R-R0tpKBy_KCNyc_8D45PQzHzyLmlPjDbntZJEBEYY/edit?tab=t.0">user guide</a> for details.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- End challenge overview -->
-<!--               Participants in this challenge will be tasked with predicting the bounding boxes for each given instance from testing images. This exciting opportunity allows researchers, students, and data scientists to apply their expertise in computer vision and machine learning to address instance detection problem. We refer participants to the user guide for details. -->
 
 
   <!-- Dates overview -->
@@ -124,7 +122,7 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Important Dates</h2>
             <div class="content has-text-justified">
-              <p style="text-align: justify;">
+              <p style="text-align: left;">
                 <li><s>March 24, 2025, InsDet (6.60 GB) will be released.</s></li>
                 <li><s>March 24, 2025, EvalAI server will be open.</s></li>
                 <li><s>May 1, 2025, Scenes Test (2.43 GB) will be released.</s></li>
@@ -149,8 +147,7 @@
             <h2 class="title is-3">Dataset</h2>
             <div class="content has-text-justified">
               <p style="text-align: justify;">
-                The dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. 
-                Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
+                The dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
               <ol>
                 <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). 
                   Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view.</li>
@@ -176,21 +173,16 @@
             <div class="content has-text-justified">
               <p style="text-align: justify;">
                 <ol>
-                  <li><b>Goal.</b> Developing instance detectors using profile images and optionally some random background images. 
-                    The detector should detect object instances of interest in real-world testing images.</li>
+                  <li><b>Goal.</b> Developing instance detectors using profile images and optionally some random background images. The detector should detect object instances of interest in real-world testing images.</li>
                   <li><b>Environment for model development.</b>
                     <ol type="a">
-                      <li>A set of object instances, each of which has some visual examples captured from multiple views. 
-                        Participants should develop a model to successfully detect these object instances.</li>
-                      <li>Some random background images (not used in testing). Participants might use them to synthesize images. 
-                        Participants can also download and use other external background images in training.</li>
+                      <li>A set of object instances, each of which has some visual examples captured from multiple views. Participants should develop a model to successfully detect these object instances.</li>
+                      <li>Some random background images (not used in testing). Participants might use them to synthesize images. Participants can also download and use other external background images in training.</li>
                     </ol>
                   </li>
-                  <li><b>Environment for testing.</b> Real-world indoor scene images, in which participants' algorithms should 
-                    detect object instances of interest.</li>
+                  <li><b>Environment for testing.</b> Real-world indoor scene images, in which participants' algorithms should detect object instances of interest.</li>
                 </ol>
-                <b>Importantly, participants are not allowed to develop any instance detectors on the Real-world indoor scene images we provided.</b> 
-                Furthermore, for participants who are invited for a presentation, we might ask for your code and models for verification. 
+                <b>Importantly, participants are not allowed to develop any instance detectors on the Real-world indoor scene images we provided.</b> Furthermore, for participants who are invited for a presentation, we might ask for your code and models for verification. 
               </p>    
             </div>
           </div>
@@ -208,9 +200,7 @@
             <h2 class="title is-3">Evaluation Metrics</h2>
             <div class="content has-text-justified">
               <p style="text-align: justify;">
-                Following the COCO dataset, we tag testing object instances as small, medium, and large according to their 
-                bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector 
-                on InsDet dataset. Additionally, we will also evaluate AP on easy and hard scenes separately. 
+                Following the COCO dataset, we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on InsDet dataset. Additionally, we will also evaluate AP on easy and hard scenes separately. 
               </p>
               <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: 80%; height: 80%; display: block; margin: 0 auto;"/> 
             </div>
@@ -285,20 +275,6 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="content">
-        <p>
-          It borrows the source code of <a href="https://github.com/nerfies/nerfies.github.io">this website</a>.
-          We would like to thank Utkarsh Sinha and Keunhong Park.
-        </p>
-      </div>
-    </div>
-  </footer>
-
 </body>
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
-<script src="js/main.js"></script> <!-- Resource jQuery -->
 
 </html>

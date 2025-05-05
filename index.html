@@ -93,17 +93,14 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Overview</h2>
-            <img src="static/pics/site/objdet-insdet.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
-            <br>
+            <img src="static/pics/site/objdet-insdet.png" alt="1" style="width: auto; height: auto; display: block; margin: 5px auto;"/> 
             <div class="content has-text-justified">
               <p style="text-align: justify;">
                 Instance Detection (InsDet) is a practically important task in robotics applications, e.g., elderly-assistant robots need to fetch specific items from a cluttered kitchen, micro-fulfillment robots for the retail need to pick items from mixed boxes or shelves. Different from Object Detection (ObjDet) detecting all objects belonging to some predefined classes, InsDet aims to detect specific object instances defined by some examples capturing the instance from multiple views.
               </p>  
-              <br>
               <p style="text-align: justify;">              
                 This year, we plan to run a competition on our InsDet dataset, which is the instance detection benchmark dataset which is larger in scale and more challenging than existing InsDet datasets. The major strengths of our InsDet dataset over prior InsDet datasets include (1) both high-resolution profile images of object instances and high-resolution testing images from more realistic indoor scenes, simulating real-world indoor robots locating and recognizing object instances from a cluttered indoor scene in a distance (2) a realistic unified InsDet protocol to foster the InsDet research. 
               </p>  
-              <br>
               <p style="text-align: justify;">              
                 Participants in this challenge will be tasked with predicting the bounding boxes for each given instance from testing images. This exciting opportunity allows researchers, students, and data scientists to apply their expertise in computer vision and machine learning to address instance detection problem. We refer participants to the <a href="https://docs.google.com/document/d/15R-R0tpKBy_KCNyc_8D45PQzHzyLmlPjDbntZJEBEYY/edit?tab=t.0">user guide</a> for details.
               </p>
@@ -148,11 +145,15 @@
             <div class="content has-text-justified">
               <p style="text-align: justify;">
                 The <b>InsDet</b> dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
-              <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view. When capturing profile images for each instance, inspired by prior arts, we paste a QR code on the tabletop, which enables pose estimation, e.g., using COLMAP. We use the GrabCut toolbox to derive foreground masks of instances in profile images. This removes background pixels (such as QR code regions) in the profile images.<br>In practice, we center-crop foreground instances from profile images and downsize the center-crops to 1024&times;1024, and save images and masks.
-              </li>
-              <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
-              <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels. We also provide a JSON file of all annotations in the dataset.
-              </li>
+              <ul>
+                <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view. When capturing profile images for each instance, inspired by prior arts, we paste a QR code on the tabletop, which enables pose estimation, e.g., using COLMAP. We use the GrabCut toolbox to derive foreground masks of instances in profile images. This removes background pixels (such as QR code regions) in the profile images.<br>In practice, we center-crop foreground instances from profile images and downsize the center-crops to 1024&times;1024, and save images and masks.
+                <img src="static/pics/site/vis-objects.png" alt="1" style="width: auto; height: auto; display: block; margin: 5px auto;"/>
+                </li>
+                <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
+                <img src="static/pics/site/vis-background.png" alt="1" style="width: auto; height: auto; display: block; margin: 5px auto;"/>
+              <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels. We also provide a JSON file of all annotations in the dataset.</li> 
+                <img src="static/pics/site/vis-scenes.png" alt="1" style="width: auto; height: auto; display: block; margin: 5px auto;"/>             
+              </ul>
               The <b>Scenes-Test</b> has the same structure of Scenes, but most images are captured from different scenarios. This part includes 320 high-resolution images (6144&times;8192) in cluttered scenes.
               </p>    
             </div>
@@ -171,17 +172,14 @@
             <h2 class="title is-3">Benchmarking Protocol</h2>
             <div class="content has-text-justified">
               <p style="text-align: justify;">
-                <li><b>Goal.</b> Developing instance detectors using profile images (cf. visuals below) and optionally some random background images (e.g., to apply cut-paste-learn). The detector should detect object instances of interest in real-world testing images.</li>
+                <li><b>Goal.</b> Developing instance detectors using profile images (cf. visuals below) and optionally some random background images (e.g., to apply cut-paste-learn<sup>[1]</sup>). The detector should detect object instances of interest in real-world testing images.</li>
                 <li><b>Environment for model development.</b>
                   <ol type="a">
                     <li>A set of object instances, each of which has some visual examples captured from multiple views. Participants should develop a model to successfully detect these object instances.</li>
-                    <img src="static/pics/site/vis-objects.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/>
                     <li>Some random background images (not used in testing). Participants might use them to synthesize images. Participants can also download and use other external background images in training.</li>
-                    <img src="static/pics/site/vis-background.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/>
                   </ol>
                 </li>
                 <li><b>Environment for testing.</b> Real-world indoor scene images, in which participants' algorithms should detect object instances of interest.</li>
-                <img src="static/pics/site/vis-scenes.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/>
                 <b>Importantly, participants are not allowed to develop any instance detectors on the Real-world indoor scene images we provided.</b> Furthermore, for participants who are invited for a presentation, we might ask for your code and models for verification. 
               </p>    
             </div>
@@ -200,21 +198,21 @@
             <h2 class="title is-3">Evaluation & Submission</h2>
             <div class="content has-text-justified">
               <p style="text-align: justify;">
-                Following the COCO dataset, we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on <b>InsDet</b> dataset. Additionally, we will also evaluate AP on <b>easy</b> and <b>hard</b> scenes separately. 
+                Following the COCO dataset<sup>[8]</sup>, we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on <b>InsDet</b> dataset. Additionally, we will also evaluate AP on <b>easy</b> and <b>hard</b> scenes separately. 
               </p>
-              <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: 80%; height: 80%; display: block; margin: 0 auto;"/>
+              <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: 80%; height: 80%; display: block; margin: 5px auto;"/>
               <b>Official Baseline</b>
               <ol>
-                <li><b>Faster RCNN + Cut-Paste-Learn strategy.</b>
-                  We train Faster RCNN with data generated using the Cut-Paste-Learn strategy. The detailed hyperparameters used in data generation and model training are mentioned in the paper.
+                <li><b>Faster RCNN<sup>[2]</sup> + Cut-Paste-Learn strategy<sup>[1]</sup>.</b>
+                  We train Faster RCNN with data generated using the Cut-Paste-Learn strategy. The detailed hyperparameters used in data generation and model training are mentioned in the paper [3].
                 </li>
-                <li><b>SAM + DINOv2 + StableMatching.</b>
+                <li><b>SAM<sup>[4]</sup> + DINOv2<sup>[5]</sup> + StableMatching<sup>[6,7]</sup>.</b>
                   We proposed a simple non-learned method using the off-the-shelf class-agnostic segmentation model (Segment Anything Model, SAM), the self-supervised feature representation DINOv2 and classical StableMatching algorithm in the paper [3].
                 </li>
               </ol>
-              <b>Official Baseline</b>
+              <b>Submission</b>
               <p style="text-align: justify;">
-                Output format: One JSON or CSV file of predicted bounding boxes of all test images in a COCO compatible format.
+                The generated JSON or CSV file should adhere to the following dictionary format:
                 <pre><code>[{"image_id": 0, 
   "category_id": 79, 
   "bbox": [976, 632, 64, 80], 

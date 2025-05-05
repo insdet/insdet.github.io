@@ -151,8 +151,7 @@
               <ol>
                 
                 <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view. When capturing profile images for each instance, inspired by prior arts, we paste a QR code on the tabletop, which enables pose estimation, e.g., using COLMAP. We use the GrabCut toolbox to derive foreground masks of instances in profile images. This removes background pixels (such as QR code regions) in the profile images.
-                <pre><code>
-                  Instance folder: raw_data
+                <pre><code>Instance folder: raw_data
                   |-- 000_aveda_shampoo
                     |-- images
                     |-- 001.jpg
@@ -166,8 +165,7 @@
                     |-- 024.jpg
                   |-- 001_binder_clips_median
                   ...
-                  |-- 099_mug_blue
-                </code></pre>
+                  |-- 099_mug_blue</code></pre>
                 </li>
                 <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
                 <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. 

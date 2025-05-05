@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="instance detection, object detection, long-tail, continual learning, lifelong learning, deep learning, computer vision, few-shot learning, zero-shot learning, active learning, transfer learning, catastrophic forgetting, self-supervised learning, weakly supervised learning, uncertainty, interpretability, anomaly detection, robustness, generalization, large-scale testing, simulation testing, evaluation metrics, train-test domain gap, streaming data, few-shot annotation, synthetic data, data bias, diverse annotations, multi-modality, AI safety, autonomous driving, medical image, auto diagnosis, real-world applications, inter-disciplinary research, carnegie mellon, machine learning, finetuning, foundation model, generative AI">
+  
+  <!-- website icon-->
+  <link rel="short-icon" href="./static/site/logo.png">
+  
+  <title>InsDet</title>
+  <meta name="description" content="instance detection for robotics and AR/VR">
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+<!--   <style>
+    .title-bar {
+      width: 100%;
+      height: 0px;
+      background-image: #ffffffd0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .rcorners1 {
+      border-radius: 10px;
+      background: #ffffffd0;
+      padding: 5px;
+      font-size: 120%;
+      color: #5c5c5c;
+    }
+
+    .button {
+      border-radius: 10px;
+      background: #ffffffd0;
+      padding: 5px 15px 5px 15px;
+    }
+  </style> -->
+</head>
+
+<body>
+  <section class="hero">    
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="title-bar">
+          <img alt="title-image" src="https://raw.githubusercontent.com/insdet/insdet.github.io/main/static/pics/site/InsDet_finge_2-insdet-100x25.jpg">
+        </div>
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+<!--             <h1 class="title is-1 publication-title">InsDet<br>
+            </h1> -->
+            <h1 class="title is-1 publication-title">
+              <br>
+              <br>
+              <br>
+            </h1>
+            <p class="title is-3 publication-title">
+              The 1<sup>st</sup> workshop on Object <font color="blue">Ins</font>tance <font color="blue">Det</font>ection
+            </p>
+            <h1 class="is-is-4"; style="color: #5c5c5c;">in conjunction with ACCV 2024, Hanoi, Vietnam.</h1>
+            <b>Location: Nha Trang</b><br>
+            <b>Time: Dec 9</b><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h1 class="subtitle has-text-centered">
+          <a href="#overview" class="button"><b>Overview</b></a>
+          <a href="#schedule" class="button"><b>Schedule</b></a>
+          <a href="#speakers" class="button"><b>Invited Speakers</b></a>
+          <a href="#challenge" class="button"><b>Challenge</b></a>
+          <a href="#dates" class="button"><b>Important Dates</b></a>
+          <a href="#organizers" class="button"><b>Organizers</b></a>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="margin-top: -50px">
+    <div class="container is-max-desktop">
+      <section class="section" id="Overview">
+        <div class="container is-max-desktop content">
+          <h2 class="title">Overview</h2>
+          <div class="content has-text-justified">
+            Instance Detection (InsDet) is an important but fundamental problem in robotics and AR/VR applications.
+            Different from Object Detection (ObjDet) aiming to detect all objects belonging to some predefined classes, 
+            InsDet requires detecting specific object instances defined by some examples capturing the instance from multiple views. 
+            For example, in a daily scenario, when fetching a specific object instance (e.g., my-coffee-mug), 
+            a robot must detect it at a distance, distinguishing it from similar objects (e.g., other mugs or cups) 
+            in a cluttered scene for subsequent operations. An illustration of Object Detection vs. Instance Detection is shown below.
+            We invite researchers to the Challenge Workshop on Object Instance Detection where we investigate multiple directions 
+            through a competition to address InsDet problem.
+          </div>            
+          <br>
+          <div class="center">
+            <img alt="fig1" src="https://raw.githubusercontent.com/insdet/insdet.github.io/main/static/pics/site/objdet-insdet.png">
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section" style="margin-top: -50px">
+    <div class="container is-max-desktop">
+      <section class="section" id="schedule">
+        <div class="container is-max-desktop content">
+          <h2 class="title">Schedule</h2>
+          <div class="content has-text-justified">
+            <table class="table table-striped">
+              <tr>
+                <td width="200" style="background-color:#16537e"><font color="white">GMT+7 / Time in Hanoi</font></td>
+                <td width="200" style="background-color:#16537e"><font color="white">Event</font></td>
+                <td width="500" style="background-color:#16537e"><font color="white">Title/Presenter</font></td>
+              </tr>
+              <tr>
+                <td width="200" style="background-color:#ffffff">13:45 - 14:00</td>
+                <td width="200" style="background-color:#ffffff">Opening Remarks</td>
+                <td width="500" style="background-color:#ffffff">
+                  <strong>Qianqian Shen</strong>
+                  <span style="color:#999999;">Zhejiang University</span>
+                  <br>
+                  <strong>Object Instance Detection</strong>
+                </td>
+              </tr>
+              <tr>
+                <td width="200" style="background-color:#f5f2f2">14:00 - 14:45</td>
+                <td width="200" style="background-color:#f5f2f2">Invited talk #1</td>
+                <td width="500" style="background-color:#f5f2f2">
+                  <a href="http://aimerykong.github.io/" target="_blank"><strong>Shu Kong</strong></a>
+                  <span style="color:#999999;">Texas A&M, University of Macau</span>
+                  <br>
+                  <strong>Instance Detection and Tracking in the Open World</strong>
+                </td>
+              </tr>
+              <tr>
+                <td width="200" style="background-color:#ffffff">14:45 - 15:30</td>
+                <td width="200" style="background-color:#ffffff">Invited talk #2</td>
+                <td width="500" style="background-color:#ffffff">
+                  <a href="https://scholar.google.com/citations?hl=en&user=1cmlS7kAAAAJ" target="_blank"><strong>Nuo Xu</strong></a>
+                  <span style="color:#999999;">Zhejiang Lab</span>
+                  <br>
+                  <strong>Visual-Language Alignment for Object-goal Navigation</strong>
+                </td>
+              </tr>             
+              <tr>
+                <td width="200" style="background-color:#f5f2f2">15:30 - 15:50</td>
+                <td width="200" style="background-color:#f5f2f2"><b>Coffee break</b></td>
+                <td width="500" style="background-color:#f5f2f2"></td>
+              </tr>              
+              <tr>
+                <td width="200" style="background-color:#ffffff">15:50 - 16:00</td>
+                <td width="200" style="background-color:#ffffff">Challenge Overview</td>
+                <td width="500" style="background-color:#ffffff">
+                  <strong>Qianqian Shen</strong>
+                  <span style="color:#999999;">Zhejiang University</span>
+                  <br>
+                </td>
+              </tr>
+              <tr>
+                <td width="200" style="background-color:#f5f2f2">16:00 - 16:45</td>
+                <td width="200" style="background-color:#f5f2f2">Challenge talks</td>
+                <td width="500" style="background-color:#f5f2f2">
+                  <strong>Sixuan Wang, Zhiwei Gui, Xingrong Zhang, Yihan Xu*</strong>
+                  <span style="color:#999999;">Central South University, *Beijing Jiaotong University</span>
+                  <br>
+                  <strong>Nan Qiao, Jun Cao, Yan Chen</strong>
+                  <span style="color:#999999;">Central South University</span>
+                </td>
+              </tr>
+              <tr>
+                <td width="200" style="background-color:#ffffff">16:45 - 16:50</td>
+                <td width="200" style="background-color:#ffffff">Closing Remarks</td>
+                <td width="500" style="background-color:#ffffff">
+                  <br>
+                  </td>
+              </tr>
+            </table>
+          </div>  
+        </div>
+      </section>
+    </div>
+  </section>
+
+
+<section class="section" id="Invited Speakers">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="speakers">Invited Speakers</h2>
+
+      <a href="https://aimerykong.github.io/" target="_blank">
+        <div class="card">
+          <div class="card-content">
+            <div class="columns is-vcentered">
+              <div class="column is-one-quarter">
+                <figure class="image is-160x160">
+                  <img class="is-rounded" src="./static/pics/people/shu.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <p class="title is-4">Shu Kong</p>
+                <p class="subtitle is-6">UMacau, Texas A&M</p>
+              </div>
+            </div>
+            <div class="content has-text-justified">
+              Shu Kong is on the faculty of FST, University of Macau, and CSE, Texas A&M University. He leads the Computer Vision Lab. Before that he spent two years as a postdoctoral researcher at the Robotics Institute, CMU. He received his PhD from UC-Irvine. His research interests lie in computer vision, machine learning and robotics, with a particular interest in visual perception and learning in an open world. He has published a number of papers addressing open-world problems and applying their solutions to interdisciplinary research. His paper on open-set recognition received honorable mention for Best Paper / Marr Prize at ICCV2021. He was the lead organizer of the workshops on "open-world vision" at CVPR 2021-2024, and "Dealing with the Novelty in Open Worlds" at WACV 2022 and 2023. 
+            </div>
+          </div>
+        </div>
+      </a>
+
+<!--       <a href="https://yananlix1.github.io/" target="_blank">
+        <div class="card">
+          <div class="card-content">
+            <div class="columns is-vcentered">
+              <div class="column is-one-quarter">
+                <figure class="image is-160x160">
+                  <img class="is-rounded" src="./static/pics/people/yanan-li.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <p class="title is-4">Yanan Li</p>
+                <p class="subtitle is-6">Zhejiang Lab</p>
+              </div>
+            </div>
+            <div class="content has-text-justified">
+              Yanan Li is an associate researcher at Zhejiang Lab, leading a fundamental computer vision/machine learning research group. Before that, she completed her PhD in the Department of Computer Science and Technology from Zhejiang University. Her research interests focus on zero/few-shot learning, open-world learning, long-tailed recognition, object/instance detection and segmentation. She has published a number of papers addressing zero/few-shot learning problems and applying their solutions to interdisciplinary research. She was one of the organizers of the workshops on "open-world vision" at CVPR 2023 and 2024.
+            </div>
+          </div>
+        </div>
+      </a> -->
+
+      <a href="https://scholar.google.com/citations?hl=en&user=1cmlS7kAAAAJ" target="_blank">
+        <div class="card">
+          <div class="card-content">
+            <div class="columns is-vcentered">
+              <div class="column is-one-quarter">
+                <figure class="image is-160x160">
+                  <img class="is-rounded" src="./static/pics/people/nuo-xu.png">
+                </figure>
+              </div>
+              <div class="column">
+                <p class="title is-4">Nuo Xu</p>
+                <p class="subtitle is-6">Zhejiang Lab</p>
+              </div>
+            </div>
+            <div class="content has-text-justified">Nuo Xu is an Assistant Researcher at Zhejiang Lab. Before that, he received his PhD from the National Laboratory of Pattern Recognition (NLPR) at the Institute of Automation, Chinese Academy of Sciences (CASIA). His research interests include active vision, embodied agents, computer vision, and reinforcement learning. He has published papers in leading publications such as CVPR, ICRA, and AAAI.</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  
+  <section class="section" style="margin-top: -50px">
+    <div class="container is-max-desktop">
+      <section class="section" id="Challenge">
+        <div class="container is-max-desktop content">
+          <h2 class="title" id="challenge">Challenge</h2>
+            <div class="content has-text-justified">
+              This year, we plan to run a competition on our InsDet dataset, which is the first instance detection benchmark dataset which is larger 
+              in scale and more challenging than existing InsDet datasets. The major strengths of our InsDet dataset over prior InsDet datasets include 
+              (1) both high-resolution profile images of object instances and high-resolution testing images from more realistic indoor scenes, 
+              simulating real-world indoor robots locating and recognizing object instances from a cluttered indoor scene in a distance 
+              (2) a realistic unified InsDet protocol to foster the InsDet research. 
+              <ul>
+                <b><li>A realistic unified InsDet protocol.</li></b>
+                In real-world indoor robotic applications, we consider the scenario that assistive robots must locate and recognize instances to fetch them 
+                in a cluttered indoor scene. For a given object instance, the robots should see it only from a few views at the training stage, 
+                and then accurately detect it at a distance in any scene at the testing stage.
+            
+                <b><li>InsDet in the closed-world.</li></b>
+                InsDet has been explored in the closed-world, which allows access to profile images during model development, we also call it conventional instance detection. 
+                While one can exploit profile images to train models, it is still unknown how testing images look like when encountered in the open world. 
+                Prevalent methods adopt a cut-paste-learn strategy [10] that cuts and pastes profile images on random background photos 
+                (sampled in the open world) to generate synthetic training data and uses such synthetic data to train a detector.
+
+                <b><li>InsDet in the open-world.</li></b>
+                The challenge of InsDet lies in its open-world nature that one has no knowledge of data distribution at test-time, 
+                which can be unknown testing scene imagery, unexpected scene clutter, and novel object instances specified only in testing, we also call it novel instance detection. 
+                Prevalent methods exploit the open world by using foundation models and by using diverse data to pretrain InsDet models.
+              </ul>
+              <br>
+              We use <a href="https://eval.ai/web/challenges/challenge-page/2358/overview"><b>EvalAI</b></a> as submission protal.
+              Teams with interesting submission will be announced before 11:59 AOE, Dec 04, 2024. Authors are invited to give a short talk (max 15 minutes) during the workshop.
+              <br>
+              <br>
+              <h2 class="title" id="announce">Announce</h2>
+              <font color="red"><b>Congratulations to all teams for your excellent performance!</b></font>
+              <br>
+              We invite the following three teams to give a <b>short talk (max 15 minutes)</b> for your distinct performance. Please <a href="mailto:shenqq377@gmail.com">contact us</a> as soon as possible for more details. 
+              If you are not able to travel to Hanoi for any reason, you are able paticipate our workshop on virtual.
+              <div class="center">
+                <img alt="fig2" src="https://raw.githubusercontent.com/insdet/insdet.github.io/refs/heads/main/static/pics/site/LeaderBoard_ACCV2024_small.jpg">
+              </div>
+            </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+
+  <section class="section" style="margin-top: -50px">
+    <div class="container is-max-desktop">
+      <section class="section" id="Dates">
+        <div class="container is-max-desktop content">
+          <h2 class="title" id="dates">Important Dates</h2>
+          <ul><b>Data Instructions & Helper Scripts</b>: September 10, 2024</ul>
+          <ul><b>Dev Phase Start</b>: September 10, 2024</ul>
+          <ul><b>Submission Portal Start</b>: September 10, 2024</ul>
+          <ul><b>Test Phase Start</b>: October 20, 2024</ul>
+          <ul><b>Test Phase End</b>: December 4, 2024</ul>
+          <ul><b>Winner Notification</b>: December 4, 2024</ul>
+        </div>
+      </section>
+    </div>
+  </section>
+  
+
+ <section class="section" id="Organizers">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="organizers">Organizers</h2>
+      <div class="columns is-centered is-variable is-0">
+        <div style="display: flex">
+          <div style="width:25%; justify-content: center">
+            <a href="https://shenqq377.github.io/">
+              <img alt="Qianqian Shen" src="static/pics/people/qianqian-shen.png" height="200"  width ="200" style =  "border-radius: 50%; object-fit: cover; ">
+            </a><br>
+            <a href="https://shenqq377.github.io/">Qianqian Shen</a><br>
+            Zhejiang University
+          </div>
+        
+          <div style="width:7.5%">
+          </div>
+   
+          <div style="width:25%; justify-content: center">
+            <a href="https://www.aminer.cn/profile/5617e32a45cedb3397c418c6/">
+              <img alt="Haishuai Wang" src="static/pics/people/haishuai-wang.jpg"  height="200"   width ="200" style =  "border-radius: 50%; object-fit: cover; ">
+            </a><br>
+            <a href="https://www.aminer.cn/profile/5617e32a45cedb3397c418c6">Haishuai Wang</a><br>
+            Zhejiang University
+          </div>
+        
+          <div style="width:7.5%">
+          </div>
+          
+          <div style="width:25%; justify-content: center">
+            <a href="https://yananlix1.github.io/">
+              <img alt="Yanan Li" src="static/pics/people/yanan-li.jpg"   height="200"  width ="200" style =  "border-radius: 50%; object-fit: cover; ">
+            </a><br>
+            <a href="https://yananlix1.github.io/">Yanan Li</a><br>
+            Zhejiang Lab
+          </div>
+  
+          <div style="width:7.5%">
+          </div>
+       
+          <div style="width:25%; justify-content: center">
+            <a href="https://ics.uci.edu/~yunhaz5/">
+              <img alt="Yunhan Zhao" src="static/pics/people/yunhan-zhao.png"   height="200"  width ="200" style =  "border-radius: 50%; object-fit: cover; ">
+            </a><br>
+            <a href="https://ics.uci.edu/~yunhaz5/">Yunhan Zhao</a><br>
+            UC Irvine
+          </div>
+  
+          <div style="width:7.5%">
+          </div>
+
+          <div style="width:25%; justify-content: center">
+            <a href="https://nahyunkwon.github.io/">
+              <img alt="Nahyun Kwon" src="static/pics/people/nahyun-kwon.png"   height="200" width ="200" style =  "border-radius: 50%; object-fit: cover; ">
+            </a><br>
+            <a href="https://nahyunkwon.github.io/">Nahyun Kwon</a><br>
+            Texas A&M
+          </div>
+  
+          <div style="width:7.5%">
+          </div>
+  
+          <div style="width:25%; justify-content: center">
+            <a href="https://insdet.github.io/">
+              <img alt="Kelu Yao" src="static/pics/people/kelu-yao.png"  height="200"  width ="200" style =  "border-radius: 50%; object-fit: cover; ">
+            </a><br>
+            <a href="https://insdet.github.io/">Kelu Yao</a><br>
+            Zhejiang Lab
+          </div>
+        
+          <div style="width:7.5%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content">
+        <p>
+          It borrows the source code of <a href="https://github.com/nerfies/nerfies.github.io">this website</a>.
+          We would like to thank Utkarsh Sinha and Keunhong Park.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+</html>

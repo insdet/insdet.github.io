@@ -147,30 +147,13 @@
             <h2 class="title is-3">Dataset</h2>
             <div class="content has-text-justified">
               <p style="text-align: justify;">
-                The dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
-              <ol>
-                
-                <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view. When capturing profile images for each instance, inspired by prior arts, we paste a QR code on the tabletop, which enables pose estimation, e.g., using COLMAP. We use the GrabCut toolbox to derive foreground masks of instances in profile images. This removes background pixels (such as QR code regions) in the profile images.
-                <pre><code>Instance folder: raw_data
-                  |-- 000_aveda_shampoo
-                    |-- images
-                    |-- 001.jpg
-                    |-- 002.jpg
-                    ...
-                    |-- 024.jpg
-                  |-- masks
-                    |-- 001.jpg
-                    |-- 002.jpg
-                    ...
-                    |-- 024.jpg
-                  |-- 001_binder_clips_median
-                  ...
-                  |-- 099_mug_blue</code></pre>
-                </li>
-                <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
-                <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. 
-                  We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels.</li>
-              </ol>                
+                The <b>InsDet</b> dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
+              <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view. When capturing profile images for each instance, inspired by prior arts, we paste a QR code on the tabletop, which enables pose estimation, e.g., using COLMAP. We use the GrabCut toolbox to derive foreground masks of instances in profile images. This removes background pixels (such as QR code regions) in the profile images.<br>In practice, we center-crop foreground instances from profile images and downsize the center-crops to 1024&times;1024, and save images and masks.
+              </li>
+              <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
+              <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels. We also provide a JSON file of all annotations in the dataset.
+              </li>
+              The <b>Scenes-Test</b> has the same structure of Scenes, but most images are captured from different scenarios. This part includes 320 high-resolution images (6144&times;8192) in cluttered scenes.
               </p>    
             </div>
           </div>
@@ -188,16 +171,17 @@
             <h2 class="title is-3">Benchmarking Protocol</h2>
             <div class="content has-text-justified">
               <p style="text-align: justify;">
-                <ol>
-                  <li><b>Goal.</b> Developing instance detectors using profile images and optionally some random background images. The detector should detect object instances of interest in real-world testing images.</li>
-                  <li><b>Environment for model development.</b>
-                    <ol type="a">
-                      <li>A set of object instances, each of which has some visual examples captured from multiple views. Participants should develop a model to successfully detect these object instances.</li>
-                      <li>Some random background images (not used in testing). Participants might use them to synthesize images. Participants can also download and use other external background images in training.</li>
-                    </ol>
-                  </li>
-                  <li><b>Environment for testing.</b> Real-world indoor scene images, in which participants' algorithms should detect object instances of interest.</li>
-                </ol>
+                <li><b>Goal.</b> Developing instance detectors using profile images (cf. visuals below) and optionally some random background images (e.g., to apply cut-paste-learn). The detector should detect object instances of interest in real-world testing images.</li>
+                <li><b>Environment for model development.</b>
+                  <ol type="a">
+                    <li>A set of object instances, each of which has some visual examples captured from multiple views. Participants should develop a model to successfully detect these object instances.</li>
+                    <img src="static/pics/site/vis-objects.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/>
+                    <li>Some random background images (not used in testing). Participants might use them to synthesize images. Participants can also download and use other external background images in training.</li>
+                    <img src="static/pics/site/vis-background.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/>
+                  </ol>
+                </li>
+                <li><b>Environment for testing.</b> Real-world indoor scene images, in which participants' algorithms should detect object instances of interest.</li>
+                <img src="static/pics/site/vis-scenes.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/>
                 <b>Importantly, participants are not allowed to develop any instance detectors on the Real-world indoor scene images we provided.</b> Furthermore, for participants who are invited for a presentation, we might ask for your code and models for verification. 
               </p>    
             </div>
@@ -213,12 +197,43 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Evaluation Metrics</h2>
+            <h2 class="title is-3">Evaluation & Submission</h2>
             <div class="content has-text-justified">
               <p style="text-align: justify;">
-                Following the COCO dataset, we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on InsDet dataset. Additionally, we will also evaluate AP on easy and hard scenes separately. 
+                Following the COCO dataset, we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on <b>InsDet</b> dataset. Additionally, we will also evaluate AP on <b>easy</b> and <b>hard</b> scenes separately. 
               </p>
-              <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: 80%; height: 80%; display: block; margin: 0 auto;"/> 
+              <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: 80%; height: 80%; display: block; margin: 0 auto;"/>
+              <b>Official Baseline</b>
+              <ol>
+                <li><b>Faster RCNN + Cut-Paste-Learn strategy.</b>
+                  We train Faster RCNN with data generated using the Cut-Paste-Learn strategy. The detailed hyperparameters used in data generation and model training are mentioned in the paper.
+                </li>
+                <li><b>SAM + DINOv2 + StableMatching.</b>
+                  We proposed a simple non-learned method using the off-the-shelf class-agnostic segmentation model (Segment Anything Model, SAM), the self-supervised feature representation DINOv2 and classical StableMatching algorithm in the paper [3].
+                </li>
+              </ol>
+              <b>Official Baseline</b>
+              <p style="text-align: justify;">
+                Output format: One JSON or CSV file of predicted bounding boxes of all test images in a COCO compatible format.
+                <pre><code>[{"image_id": 0, 
+  "category_id": 79, 
+  "bbox": [976, 632, 64, 80], 
+  "score": 99.32915569311469, 
+  "image_width": 8192, 
+  "image_height": 6144,
+  "scale": 1, 
+  "image_name": 
+  "easy.leisure_zone.rgb_000.jpg"},
+  ...
+ {"image_id": 159, 
+  "category_id": 9, 
+  "bbox": [921, 803, 28, 106], 
+  "score": 99.32927090665571, 
+  "image_width": 8192, 
+  "image_height": 6144, 
+  "scale": 1, 
+  "image_name": "hard.pantry_room_001.rgb_019.jpg"}]</code></pre>
+              </p>              
             </div>
           </div>
         </div>
@@ -252,7 +267,7 @@
   <!-- Organizers -->
   <section class="section hero is-light2" id="BibTeX">
     <div class="container is-max-desktop content ">
-      <h2 class="title">BibTeX</h2>
+      <h2 class="title">Organizers</h2>
       <div class="columns is-centered is-variable is-0">
         <div style="display: flex">
           <div style="width:25%; justify-content: center">

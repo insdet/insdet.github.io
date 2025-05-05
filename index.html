@@ -146,15 +146,23 @@
               <p style="text-align: justify;">
                 The <b>InsDet</b> dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
               <ul>
-                <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view. When capturing profile images for each instance, inspired by prior arts, we paste a QR code on the tabletop, which enables pose estimation, e.g., using COLMAP. We use the GrabCut toolbox to derive foreground masks of instances in profile images. This removes background pixels (such as QR code regions) in the profile images.
-                  <br>
+                <li><h4><b>Objects.</b></h4>
+                  <ol>
+                    100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view. When capturing profile images for each instance, inspired by prior arts, we paste a QR code on the tabletop, which enables pose estimation, e.g., using COLMAP. We use the GrabCut toolbox to derive foreground masks of instances in profile images. This removes background pixels (such as QR code regions) in the profile images.               
+                  </ol>
                   In practice, we center-crop foreground instances from profile images and downsize the center-crops to 1024&times;1024, and save images and masks.
                 <img src="static/pics/site/vis-objects.png" alt="1" style="width: auto; height: auto; display: block; margin: 10px auto;"/>
                 </li>
-                <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
-                <img src="static/pics/site/vis-background.png" alt="1" style="width: auto; height: auto; display: block; margin: 10px auto;"/>
-              <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels.</li> 
-                <img src="static/pics/site/vis-scenes.png" alt="1" style="width: auto; height: auto; display: block; margin: 10px auto;"/>             
+                <li><h4><b>Background.</b></h4>
+                  <ol>
+                  200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
+                <img src="static/pics/site/vis-background.png" alt="1" style="width: auto; height: auto; display: block; margin: 10px auto;"/>                    
+                  </ol>
+              <li><h4><b>Scenes.</b></h4> 
+                <ol>
+                  160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels.</li> 
+                <img src="static/pics/site/vis-scenes.png" alt="1" style="width: auto; height: auto; display: block; margin: 10px auto;"/>  
+                </ol>           
               </ul>
               The <b>Scenes-Test</b> has the same structure of Scenes, but most images are captured from different scenarios. This part includes 320 high-resolution images (6144&times;8192) in cluttered scenes.
               </p>    

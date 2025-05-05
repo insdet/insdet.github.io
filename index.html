@@ -87,46 +87,89 @@
   </section>
 
 
-  <section class="section" style="margin-top: -50px">
-    <div class="container is-max-desktop">
-      <section class="section" id="overview">
-        <div class="container is-max-desktop content">
-          <h2 class="title" id="overview">Overview</h2>
-          <br>
-          <div class="center">
-            <img alt="fig1" src="https://raw.githubusercontent.com/insdet/insdet.github.io/main/static/pics/site/objdet-insdet.png">
+  <!-- Challenge overview -->
+    <section class="section hero is-light2">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Overview</h2>
+            <img src="static/pics/site/objdet-insdet.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+            <div class="content has-text-justified">
+              <p style="text-align: justify;">
+                Instance Detection (InsDet) is a practically important task in robotics applications, e.g., elderly-assistant robots need to 
+                fetch specific items from a cluttered kitchen, micro-fulfillment robots for the retail need to pick items from mixed boxes or 
+                shelves. Different from Object Detection (ObjDet) detecting all objects belonging to some predefined classes, InsDet aims to 
+                detect specific object instances defined by some examples capturing the instance from multiple views.
+              </p>    
+              <p style="text-align: justify;">              
+                This year, we plan to run a competition on our InsDet dataset, which is the instance detection benchmark dataset which is larger 
+                in scale and more challenging than existing InsDet datasets. The major strengths of our InsDet dataset over prior InsDet datasets 
+                include (1) both high-resolution profile images of object instances and high-resolution testing images from more realistic indoor 
+                scenes, simulating real-world indoor robots locating and recognizing object instances from a cluttered indoor scene in a distance 
+                (2) a realistic unified InsDet protocol to foster the InsDet research. 
+              </p>         
+            </div>
           </div>
-          <div class="content has-text-justified">
-            Instance Detection (InsDet) is a practically important task in robotics applications, e.g., elderly-assistant robots need to fetch specific items from a cluttered kitchen, micro-fulfillment robots for the retail need to pick items from mixed boxes or shelves. Different from Object Detection (ObjDet) detecting all objects belonging to some predefined classes, InsDet aims to detect specific object instances defined by some examples capturing the instance from multiple views.
-            <br>
-            <br>
-            This year, we plan to run a competition on our InsDet dataset, which is the instance detection benchmark dataset which is larger in scale and more challenging than existing InsDet datasets. The major strengths of our InsDet dataset over prior InsDet datasets include (1) both high-resolution profile images of object instances and high-resolution testing images from more realistic indoor scenes, simulating real-world indoor robots locating and recognizing object instances from a cluttered indoor scene in a distance (2) a realistic unified InsDet protocol to foster the InsDet research. 
-            <br>
-            <br>
-            Participants in this challenge will be tasked with predicting the bounding boxes for each given instance from testing images. This exciting opportunity allows researchers, students, and data scientists to apply their expertise in computer vision and machine learning to address instance detection problem. We refer participants to the user guide for details.
-          </div>            
         </div>
-      </section>
-    </div>
-  </section>
+      </div>
+    </section>
+    <!-- End challenge overview -->
+<!--               Participants in this challenge will be tasked with predicting the bounding boxes for each given instance from testing images. This exciting opportunity allows researchers, students, and data scientists to apply their expertise in computer vision and machine learning to address instance detection problem. We refer participants to the user guide for details. -->
 
 
-  <section class="section" style="margin-top: -50px">
-    <div class="container is-max-desktop">
-      <section class="section" id="dates">
-        <div class="container is-max-desktop content">
-          <h2 class="title" id="dates">Important Dates</h2>
-          <li><s>March 24, 2025, InsDet (6.60 GB) will be released.</s></li>
-          <li><s>March 24, 2025, EvalAI server will be open.</s></li>
-          <li><s>May 1, 2025, Scenes Test (2.43 GB) will be released.</s></li>
-          <li>May 5, 2025, Evaluation scripts will be uploaded to github repo.</li>
-          <li>June 2, 2025, Challenge will be closed.</li>
-          <li>June 3, 2025, Invitation will be sent to some participants for presenting at the workshop.</li>
-          <li>June 11/12, 2025, Workshop day.</li>          
+  <!-- Dataset overview -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Dataset</h2>
+            <div class="content has-text-justified">
+              <h3>Dataset</h3>
+              <p style="text-align: justify;">
+                The dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. 
+                Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
+              
+              <ol>
+                <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). 
+                  Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view.</li>
+                <li><b>Background.</b> 200 high-resolution background images of indoor scenes that do not include any given instances from Objects.</li>
+                <li><b>Scenes.</b> 160 high-resolution images (6144&times;8192) in cluttered scenes, where some instances are placed in reasonable locations. 
+                  We tag these images as <i>easy</i> or <i>hard</i> based on scene clutter and object occlusion levels.</li>
+              </ol>                
+              </p>    
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
-  </section>
+      </div>
+    </section>
+  <!-- End dataset overview -->
+
+
+  <!-- Dates overview -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Important Dates</h2>
+            <div class="content has-text-justified">
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                <li><s>March 24, 2025, InsDet (6.60 GB) will be released.</s></li>
+                <li><s>March 24, 2025, EvalAI server will be open.</s></li>
+                <li><s>May 1, 2025, Scenes Test (2.43 GB) will be released.</s></li>
+                <li>May 5, 2025, Evaluation scripts will be uploaded to github repo.</li>
+                <li>June 2, 2025, Challenge will be closed.</li>
+                <li>June 3, 2025, Invitation will be sent to some participants for presenting at the workshop.</li>
+                <li>June 11/12, 2025, Workshop day.</li>   
+              </p>      
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- End dates overview -->
+
+
+
 
 
     <section class="section" style="margin-top: -50px">

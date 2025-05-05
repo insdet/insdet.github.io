@@ -142,17 +142,15 @@
 
 
   <!-- Dataset overview -->
-    <section class="section hero is-light">
+    <section class="section hero is-light2">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Dataset</h2>
             <div class="content has-text-justified">
-              <h3>Dataset</h3>
               <p style="text-align: justify;">
                 The dataset contains 100 object instances with multi-view profile images, 200 pure background images and 160 scene images. 
                 Participants can download the dataset from the <a href="https://drive.google.com/drive/folders/1rIRTtqKJGCTifcqJFSVvFshRb-sB0OzP?usp=sharing">InsDet</a> dataset.
-              
               <ol>
                 <li><b>Objects.</b> 100 different Object instances. Each profile image has a resolution of 3072&times;3072 pixels (some instances are 3456&times;3456). 
                   Each instance is captured at 24 rotation positions (every 15&deg; in azimuth) with a 45&deg; elevation view.</li>
@@ -169,14 +167,13 @@
   <!-- End dataset overview -->
 
 
-  <!-- Dataset overview -->
+  <!-- Protocol overview -->
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Benchmarking Protocol</h2>
             <div class="content has-text-justified">
-              <h3>Dataset</h3>
               <p style="text-align: justify;">
                 <ol>
                   <li><b>Goal.</b> Developing instance detectors using profile images and optionally some random background images. 
@@ -200,23 +197,50 @@
         </div>
       </div>
     </section>
-  <!-- End dataset overview -->
+  <!-- End protocol overview -->
   
 
-
-          <h3></h3>
-
-          <br>
-          <h3>Evaluation</h3>
-          Following the COCO dataset [8], we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on InsDet dataset. Additionally, we will also evaluate AP on easy and hard scenes separately.
-          <br>
-          <div class="center">
-            <img alt="fig1" src="https://raw.githubusercontent.com/insdet/insdet.github.io/main/static/pics/site/evaluation_metrics.png">
-          </div>          
+  <!-- Evaluation overview -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Evaluation Metrics</h2>
+            <div class="content has-text-justified">
+              <p style="text-align: justify;">
+                Following the COCO dataset, we tag testing object instances as small, medium, and large according to their 
+                bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector 
+                on InsDet dataset. Additionally, we will also evaluate AP on easy and hard scenes separately. 
+              </p>
+              <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
+  <!-- End evaluation overview -->
+
+
+  <!--BibTex citation -->
+  <section class="section hero is-light" id="BibTeX">
+    <div class="container is-max-desktop content ">
+      <h2 class="title">BibTeX</h2>
+      <p> If you find our work useful, please consider citing our papers:</p>
+      <pre><code>@inproceedings{shen2025solving,
+        title={Solving Instance Detection from an Open-World Perspective},
+        author={Shen, Qianqian and Zhao, Yunhan and Kwon, Nahyun and Kim, Jeeeun and Li, Yanan and Kong, Shu},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+        year={2025}
+      }</code></pre>
+      <pre><code>@inproceedings{shen2023high,
+        title={A high-resolution dataset for instance detection with multi-view object capture},
+        author={Shen, Qianqian and Zhao, Yunhan and Kwon, Nahyun and Kim, Jeeeun and Li, Yanan and Kong, Shu},
+        booktitle={Conference on Neural Information Processing Systems (NeurIPS) Datasets & Benchmark Track},
+        year={2023}
+      }</code></pre>
     </div>
   </section>
+  <!--End BibTex citation -->
   
   
  <section class="section" id="Organizers">

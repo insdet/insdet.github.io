@@ -204,8 +204,8 @@
               <p style="text-align: justify;">
                 Following the COCO dataset<sup>[8]</sup>, we tag testing object instances as small, medium, and large according to their bounding box area. The following 12 metrics are used for characterizing the performance of an instance detector on <b>InsDet</b> dataset. Additionally, we will also evaluate AP on <b>easy</b> and <b>hard</b> scenes separately. 
               </p>
-              <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: 80%; height: 80%; display: block; margin: 10px auto;"/>
-              <b>Official Baseline</b>
+              <img src="static/pics/site/evaluation_metrics.png" alt="1" style="width: 60%; height: 60%; display: block; margin: 10px auto;"/>
+              <h3><b>Official Baseline</b></h3>
               <ol>
                 <li><b>Faster RCNN<sup>[2]</sup> + Cut-Paste-Learn strategy<sup>[1]</sup>.</b>
                   We train Faster RCNN with data generated using the Cut-Paste-Learn strategy. The detailed hyperparameters used in data generation and model training are mentioned in the paper [3].
@@ -214,7 +214,7 @@
                   We proposed a simple non-learned method using the off-the-shelf class-agnostic segmentation model (Segment Anything Model, SAM), the self-supervised feature representation DINOv2 and classical StableMatching algorithm in the paper [3].
                 </li>
               </ol>
-              <b>Submission</b>
+              <h3><b>Submission</b></h3>
               <p style="text-align: justify;">
                 The generated JSON or CSV file should adhere to the following dictionary format:
                 <pre><code>[{"image_id": 0, 
